@@ -1,0 +1,704 @@
+fileFormatVersion: 2
+guid: f578e2fa3b53c2447adfb00f76efd522
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1791268602008194514
+    second: icon buttons (isekaid)_0
+  - first:
+      213: 4470485603577981277
+    second: icon buttons (isekaid)_1
+  - first:
+      213: -3083525763656639051
+    second: icon buttons (isekaid)_2
+  - first:
+      213: -7096518841760425545
+    second: icon buttons (isekaid)_3
+  - first:
+      213: 7819785946572246337
+    second: icon buttons (isekaid)_4
+  - first:
+      213: 1465293032457015197
+    second: icon buttons (isekaid)_5
+  - first:
+      213: 6772507646614621785
+    second: icon buttons (isekaid)_6
+  - first:
+      213: -1759111460416752494
+    second: icon buttons (isekaid)_7
+  - first:
+      213: 5353656590240840424
+    second: icon buttons (isekaid)_8
+  - first:
+      213: -8313270012190251397
+    second: icon buttons (isekaid)_9
+  - first:
+      213: 1167104450631981621
+    second: icon buttons (isekaid)_10
+  - first:
+      213: 1476449211501974454
+    second: icon buttons (isekaid)_11
+  - first:
+      213: 1638413608004898059
+    second: icon buttons (isekaid)_12
+  - first:
+      213: -2845757995594299850
+    second: icon buttons (isekaid)_13
+  - first:
+      213: -5116262951221807304
+    second: icon buttons (isekaid)_14
+  - first:
+      213: 3542860112575175128
+    second: icon buttons (isekaid)_15
+  - first:
+      213: -8209809679592069137
+    second: icon buttons (isekaid)_16
+  - first:
+      213: 6876838224425576305
+    second: icon buttons (isekaid)_17
+  - first:
+      213: 2108163211927726334
+    second: icon buttons (isekaid)_18
+  - first:
+      213: -6887302431028499916
+    second: icon buttons (isekaid)_19
+  - first:
+      213: 8174772999557060198
+    second: icon buttons (isekaid)_20
+  - first:
+      213: -1306266496352830018
+    second: icon buttons (isekaid)_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd42009d4ddbd810800000000000000
+      internalID: 1791268602008194514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 22
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5963c688fa5a0e30800000000000000
+      internalID: 4470485603577981277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 22
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd1b79b7ad1535d0800000000000000
+      internalID: -3083525763656639051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 22
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9d00f56b9148d90800000000000000
+      internalID: -7096518841760425545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_4
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 22
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dc70d23e5758c60800000000000000
+      internalID: 7819785946572246337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f8473ef34c55410800000000000000
+      internalID: 1465293032457015197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ec41382d7ccfd50800000000000000
+      internalID: 6772507646614621785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2947a8962716697e0800000000000000
+      internalID: -1759111460416752494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_8
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eafbbecd420c4a40800000000000000
+      internalID: 5353656590240840424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_9
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 2
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b762e7138f451ac80800000000000000
+      internalID: -8313270012190251397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a52b37053623010800000000000000
+      internalID: 1167104450631981621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 2
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b31b7c3cb66d7410800000000000000
+      internalID: 1476449211501974454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 3
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d4c4cee70dcb610800000000000000
+      internalID: 1638413608004898059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636cfd33e26d188d0800000000000000
+      internalID: -2845757995594299850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_14
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 2
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837bee6f3f16ff8b0800000000000000
+      internalID: -5116262951221807304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d991f26084ca2130800000000000000
+      internalID: 3542860112575175128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 3
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7e9560895e01e80800000000000000
+      internalID: -8209809679592069137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_17
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177e6b81eef6f6f50800000000000000
+      internalID: 6876838224425576305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_18
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 3
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8af7f8543b14d10800000000000000
+      internalID: 2108163211927726334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43aacd1fde26b60a0800000000000000
+      internalID: -6887302431028499916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_20
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 3
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6669d063bb0a27170800000000000000
+      internalID: 8174772999557060198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon buttons (isekaid)_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 2
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd35eeda853fdde0800000000000000
+      internalID: -1306266496352830018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      icon buttons (isekaid)_0: 1791268602008194514
+      icon buttons (isekaid)_1: 4470485603577981277
+      icon buttons (isekaid)_10: 1167104450631981621
+      icon buttons (isekaid)_11: 1476449211501974454
+      icon buttons (isekaid)_12: 1638413608004898059
+      icon buttons (isekaid)_13: -2845757995594299850
+      icon buttons (isekaid)_14: -5116262951221807304
+      icon buttons (isekaid)_15: 3542860112575175128
+      icon buttons (isekaid)_16: -8209809679592069137
+      icon buttons (isekaid)_17: 6876838224425576305
+      icon buttons (isekaid)_18: 2108163211927726334
+      icon buttons (isekaid)_19: -6887302431028499916
+      icon buttons (isekaid)_2: -3083525763656639051
+      icon buttons (isekaid)_20: 8174772999557060198
+      icon buttons (isekaid)_21: -1306266496352830018
+      icon buttons (isekaid)_3: -7096518841760425545
+      icon buttons (isekaid)_4: 7819785946572246337
+      icon buttons (isekaid)_5: 1465293032457015197
+      icon buttons (isekaid)_6: 6772507646614621785
+      icon buttons (isekaid)_7: -1759111460416752494
+      icon buttons (isekaid)_8: 5353656590240840424
+      icon buttons (isekaid)_9: -8313270012190251397
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
