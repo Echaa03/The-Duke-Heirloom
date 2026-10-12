@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1726, y: -90}
+  m_AnchoredPosition: {x: -1416, y: -57}
   m_SizeDelta: {x: 283.8755, y: 277.1153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265147940
@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.41018, y: -18}
-  m_SizeDelta: {x: 1186.6797, y: 170}
+  m_AnchoredPosition: {x: -202, y: -24}
+  m_SizeDelta: {x: 1099.5986, y: 146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384800971
 MonoBehaviour:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -278,15 +278,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 40
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 8
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467, y: 107}
+  m_AnchoredPosition: {x: -547, y: 85}
   m_SizeDelta: {x: 215, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583137130
@@ -763,8 +763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -4.9146, y: 185}
-  m_SizeDelta: {x: 1253.5055, y: 280.4388}
+  m_AnchoredPosition: {x: 41.096786, y: 185}
+  m_SizeDelta: {x: 1345.528, y: 280.4388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488345576
 MonoBehaviour:
@@ -786,9 +786,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5541813128869567094, guid: 69039b8f6cb80b54cb4cb2ea113b430e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69039b8f6cb80b54cb4cb2ea113b430e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -820,6 +820,8 @@ MonoBehaviour:
   DialogueText: {fileID: 384800971}
   inkFile: {fileID: 6231892579173505729, guid: 96257d003ed271f42848882d81574570, type: 3}
   Typingspeedyeet: 0.03
+  inspection: {fileID: 0}
+  inspectionHint: Click anything in the document that looks important.
 --- !u!225 &1488345579
 CanvasGroup:
   m_ObjectHideFlags: 0

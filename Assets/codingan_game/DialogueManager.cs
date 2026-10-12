@@ -118,9 +118,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         typing = StartCoroutine(Typingeffectyeet());
     }
 
-    void ReadTags(List<string> tags)
+    void ReadTags(List <string> tags)
     {
-        if (tags == null) return;
+        if (tags == null) 
+            
+            return;
 
         foreach (string raw in tags)
         {
@@ -131,10 +133,14 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
             switch (key)
             {
-                case "inspect":  pendingInspect = value; break;
-                case "open":     pendingOpenDoc = value; break;
-                case "evidence": inspection.ShowEvidence(value); break;
-                case "complete": pendingComplete = true; break;
+                case "inspect":  pendingInspect = value; 
+                    break;
+                case "open":     pendingOpenDoc = value; 
+                    break;
+                case "evidence": inspection.ShowEvidence(value);
+                    break;
+                case "complete": pendingComplete = true;
+                    break;
             }
         }
     }
@@ -161,7 +167,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
     void OnHotspotClicked(string hotspotId)
     {
-        if (!inInspection || clueRunning || isTyping) return;
+        if (!inInspection || clueRunning || isTyping) 
+           
+            return;
 
         string knot = "inspect_" + (hotspotId.StartsWith("HS_") ? hotspotId.Substring(3) : hotspotId);
         try
@@ -215,7 +223,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         inInspection = false;
         clueRunning = false;
-        if (InkFlag(InspectionDoneVar)) story.variablesState[InspectionDoneVar] = false; // reset for next inspct
+        if (InkFlag(InspectionDoneVar))
+            story.variablesState[InspectionDoneVar] = false; // reset for next inspct
+
         story.SwitchToDefaultFlow();
         inspection.Close();
         NextLine(); // after this the game continue like usual
