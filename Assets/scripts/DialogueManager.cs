@@ -25,6 +25,13 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (isTyping)
+        {
+            StopCoroutine(typing);
+            DialogueText.maxVisibleCharacters = 9099999;
+            isTyping = false;
+            return;
+        }
         NextLine();
     }
 
@@ -46,6 +53,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             NameText.text = "";
             DialogueText.text = line;
         }
+
+        if (isTyping != null)
+            StopCoroutine(typing);
     }
 
     IEnumerator Typingeffectyeet()
@@ -55,11 +65,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         DialogueText.maxVisibleCharacters = 0; //this will hide everythign
         DialogueText.ForceMeshUpdate();
 
-         int total = DialogueText.textInfo.characterCount(); //ngitung jumlah length kata2nya 
+         int total = DialogueText.textInfo.characterCount; //ngitung jumlah length kata2nya 
 
         for(int i = 0; i < total; i++)
         {
-            DialogueText.maxVisibleCharacters += i;
+            DialogueText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(Typingspeedyeet);
         }
         isTyping = false;
