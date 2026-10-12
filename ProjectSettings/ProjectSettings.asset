@@ -590,7 +590,7 @@ PlayerSettings:
   webEnableSubmoduleStrippingCompatibility: 0
   webProgressiveAssetLoading: 0
   scriptingDefineSymbols:
-    Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY
+    Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY;INK_RUNTIME;INK_EDITOR
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -695,7 +695,7 @@ PlayerSettings:
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: My project (1)
-  organizationId: 
+  organizationId: cantikaayesha69
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
