@@ -687,8 +687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.012512, y: 226.13}
-  m_SizeDelta: {x: 1106.5, y: 468.25}
+  m_AnchoredPosition: {x: -0.25629, y: 226.13}
+  m_SizeDelta: {x: 1106, y: 468.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462945944
 MonoBehaviour:
@@ -818,15 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   NameText: {fileID: 583137130}
   DialogueText: {fileID: 384800971}
-  Lines:
-  - Speaker: Narrator
-    Text: 10.45 PM. The faculty building has emptied hours ago
-  - Speaker: Narrator
-    Text: Everyone, except two peoples.
-  - Speaker: MC (inner)
-    Text: Three weeks since Sierra went missing. And yet another week of us going through this file..
-  - Speaker: MC (inner)
-    Text: "...and this report still reads like nobody\u2019s in a hurry"
+  inkFile: {fileID: 6231892579173505729, guid: 96257d003ed271f42848882d81574570, type: 3}
 --- !u!225 &1488345579
 CanvasGroup:
   m_ObjectHideFlags: 0

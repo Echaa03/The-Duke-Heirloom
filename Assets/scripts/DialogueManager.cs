@@ -1,19 +1,25 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.EventSystems;
 using TMPro;
-using Ink.Runtime;                     
+using Ink.Runtime;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour, IPointerClickHandler
 {
     public TMP_Text NameText;
     public TMP_Text DialogueText;
-    public TextAsset inkJSON;         
+    public InkFile inkFile;         
+    
+    Story story;
+    public float Typingspeedyeet = 0.03f;
+    bool isTyping = false;
+    Coroutine typing;
 
-    Story story;                     
 
     void Start()
     {
-        story = new Story(inkJSON.text);
+        story = new Story(inkFile.storyJson);
         NextLine();
     }
 
@@ -40,5 +46,22 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             NameText.text = "";
             DialogueText.text = line;
         }
+    }
+
+    IEnumerator Typingeffectyeet()
+    {
+        //panggil bool typing nya pas text nya mau munucl
+        isTyping = true;
+        DialogueText.maxVisibleCharacters = 0; //this will hide everythign
+        DialogueText.ForceMeshUpdate();
+
+         int total = DialogueText.textInfo.characterCount(); //ngitung jumlah length kata2nya 
+
+        for(int i = 0; i < total; i++)
+        {
+            DialogueText.maxVisibleCharacters += i;
+            yield return new WaitForSeconds(Typingspeedyeet);
+        }
+        isTyping = false;
     }
 }
