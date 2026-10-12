@@ -54,8 +54,10 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             DialogueText.text = line;
         }
 
-        if (isTyping != null)
+        if (typing != null)
             StopCoroutine(typing);
+
+        typing = StartCoroutine(Typingeffectyeet());
     }
 
     IEnumerator Typingeffectyeet()
@@ -67,7 +69,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
          int total = DialogueText.textInfo.characterCount; //ngitung jumlah length kata2nya 
 
-        for(int i = 0; i < total; i++)
+        for(int i = 0; i <= total; i++)
         {
             DialogueText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(Typingspeedyeet);
