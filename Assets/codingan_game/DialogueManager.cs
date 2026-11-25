@@ -169,10 +169,13 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                 case "prof": Professor.setexpression(value);
                     break;
                 default:
-                    // #call, #call_time, #call_layout -> PhoneCallUI
+                  //PhoneCallUI
+
                     if (PhoneCallUI.Instance != null && PhoneCallUI.Instance.handletag(key, value))
                         break;
-                    // #bg, #bg_black, #black, #zoom, #zoomreset -> BackgroundManager
+
+                    //  BackgroundManager
+
                     if (BackgroundManager.Instance != null)
                         BackgroundManager.Instance.handletag(key, value);
                     break;
