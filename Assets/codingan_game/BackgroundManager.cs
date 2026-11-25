@@ -4,23 +4,13 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Satu manager untuk semua BG & CG. Dipanggil dari DialogueManager lewat tag Ink:
-///
-///   #bg: BG-02            crossfade ke BG-02
-///   #bg_black: BG-03      fade ke hitam -> ganti BG -> fade balik (pindah lokasi)
-///   #black                layar hitam (keluar dengan #bg / #bg_black)
-///   #zoom: 0.75, 0.55, 2  zoom ke titik (x,y) dengan skala 2. Opsional angka ke-4 = durasi
-///   #zoomreset            balik ke zoom normal
-///
-/// Tidak perlu bikin Unity Scene baru tiap ganti background.
-/// </summary>
+
 public class BackgroundManager : MonoBehaviour
 {
     [System.Serializable]
     public class BGEntry
     {
-        public string id;      // contoh: "BG-01", "BG-02", "CG-03_empty", "CG-03_deborah"
+        public string id;     
         public Sprite sprite;
     }
 
@@ -45,7 +35,6 @@ public class BackgroundManager : MonoBehaviour
 
     public string CurrentId { get; private set; }
 
-    /// <summary>True selama transisi lewat hitam. DialogueManager menahan teks selama ini.</summary>
     public bool BlocksDialogue { get; private set; }
 
     void Awake()
@@ -76,9 +65,8 @@ public class BackgroundManager : MonoBehaviour
         }
     }
 
-    // ---------- Dipanggil dari tag Ink ----------
+    // Dipanggil dari tag Ink 
 
-    /// <summary>Baca satu tag Ink. Return true kalau tag-nya milik BackgroundManager.</summary>
     public bool handletag(string key, string value)
     {
         switch (key)
@@ -93,9 +81,9 @@ public class BackgroundManager : MonoBehaviour
         return false;
     }
 
-    // ---------- API utama ----------
 
-    /// <summary>Crossfade langsung dari BG lama ke BG baru.</summary>
+
+//fade effeccts
     public void show(string id, float duration = -1f)
     {
         id = id.Trim();
@@ -106,8 +94,7 @@ public class BackgroundManager : MonoBehaviour
         startfade(crossfade(sprite, duration < 0 ? defaultFade : duration));
         CurrentId = id;
     }
-
-    /// <summary>Fade ke hitam, ganti BG, fade balik. Cocok untuk pindah lokasi.</summary>
+    //fade to black
     public void showthroughblack(string id, float duration = -1f)
     {
         id = id.Trim();
@@ -117,16 +104,15 @@ public class BackgroundManager : MonoBehaviour
         CurrentId = id;
     }
 
-    /// <summary>Layar hitam saja. Teks tetap bisa tampil di atasnya (narasi di layar hitam).</summary>
     public void fadetoblack(float duration = -1f)
     {
         startfade(fadeimage(blackOverlay, 1f, duration < 0 ? defaultFade : duration));
     }
 
-    /// <summary>
-    /// Zoom/pan ke titik di BG yang sedang tampil.
-    /// focus: (0,0) = kiri bawah gambar, (1,1) = kanan atas, (0.5,0.5) = tengah.
-    /// </summary>
+ 
+
+    // focus: (0,0) = kiri bawah gambar, (1,1) = kanan atas, (0.5,0.5) = tengah.
+ 
     public void zoomto(Vector2 focus, float scale, float duration = 1f)
     {
         if (zoomRoutine != null)
@@ -139,7 +125,7 @@ public class BackgroundManager : MonoBehaviour
         zoomto(new Vector2(0.5f, 0.5f), 1f, duration);
     }
 
-    // ---------- Internal ----------
+  
 
     void zoomfromtag(string value)
     {
@@ -185,7 +171,7 @@ public class BackgroundManager : MonoBehaviour
 
     IEnumerator crossfade(Sprite next, float duration)
     {
-        // Kalau layar sedang hitam, buka hitamnya sekalian
+        // Kalau layar sedang hitam buka hitamnya sekalian
         if (blackOverlay != null && blackOverlay.color.a > 0f)
             StartCoroutine(fadeimage(blackOverlay, 0f, duration));
 
@@ -272,16 +258,11 @@ public class BackgroundManager : MonoBehaviour
 
     void Start()
     {
-        // Ulangi setelah Canvas Scaler selesai menghitung ukuran layar
         fitcover(frontLayer);
         fitcover(backLayer);
     }
 
-    /// <summary>
-    /// Bikin BG menutupi layar penuh TANPA gepeng (seperti "cover" di CSS).
-    /// Kalau rasio gambar beda dengan layar, sisi yang kelebihan akan terpotong sedikit,
-    /// bukan ditarik/di-stretch.
-    /// </summary>
+
     static void fitcover(Image img)
     {
         if (img == null || img.sprite == null)
@@ -290,7 +271,6 @@ public class BackgroundManager : MonoBehaviour
         RectTransform rt = img.rectTransform;
         RectTransform parent = rt.parent as RectTransform;
 
-        // ukuran layar, kalau belum kebaca pakai 1920x1080
         float screenWidth = 1920f;
         float screenHeight = 1080f;
         if (parent != null && parent.rect.width > 0f && parent.rect.height > 0f)
@@ -306,13 +286,11 @@ public class BackgroundManager : MonoBehaviour
         float height;
         if (imgRatio > screenRatio)
         {
-            // gambar lebih lebar: potong kiri-kanan
             height = screenHeight;
             width = screenHeight * imgRatio;
         }
         else
         {
-            // gambar lebih tinggi: potong atas-bawah
             width = screenWidth;
             height = screenWidth / imgRatio;
         }
