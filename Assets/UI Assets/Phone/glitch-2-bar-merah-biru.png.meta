@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 38ebb7ce9c7d39e429208d70777b1d7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7433769392647847525
+    second: glitch-2-bar-merah-biru_0
+  - first:
+      213: -4801101937495208405
+    second: glitch-2-bar-merah-biru_1
+  - first:
+      213: -3155961800011000379
+    second: glitch-2-bar-merah-biru_2
+  - first:
+      213: -398009498637476296
+    second: glitch-2-bar-merah-biru_3
+  - first:
+      213: 8343791397020795469
+    second: glitch-2-bar-merah-biru_4
+  - first:
+      213: -6734506404144376383
+    second: glitch-2-bar-merah-biru_5
+  - first:
+      213: 5274901180438861789
+    second: glitch-2-bar-merah-biru_6
+  - first:
+      213: 7879579287024206921
+    second: glitch-2-bar-merah-biru_7
+  - first:
+      213: -9200484353852658817
+    second: glitch-2-bar-merah-biru_8
+  - first:
+      213: -737089501758624201
+    second: glitch-2-bar-merah-biru_9
+  - first:
+      213: -1991923866776797372
+    second: glitch-2-bar-merah-biru_10
+  - first:
+      213: 6893215383507595115
+    second: glitch-2-bar-merah-biru_11
+  - first:
+      213: 2040341188279493952
+    second: glitch-2-bar-merah-biru_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 792
+        width: 354
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91cd098f12f5d890800000000000000
+      internalID: -7433769392647847525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 744
+        width: 347
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e8825a93f0f5db0800000000000000
+      internalID: -4801101937495208405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 583
+        width: 163
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c554a1c675c334d0800000000000000
+      internalID: -3155961800011000379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 536
+        width: 239
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e5b70487cf97af0800000000000000
+      internalID: -398009498637476296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 505
+        width: 163
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42826b711a1bc370800000000000000
+      internalID: 8343791397020795469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 473
+        width: 227
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5916b3b1a3a82a0800000000000000
+      internalID: -6734506404144376383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_6
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 480
+        width: 187
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7d85d0da6343940800000000000000
+      internalID: 5274901180438861789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 381
+        width: 101
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9448a9e1d93e95d60800000000000000
+      internalID: 7879579287024206921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 302
+        width: 386
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ba217f930515080800000000000000
+      internalID: -9200484353852658817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_9
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 340
+        width: 320
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ee100e00555c5f0800000000000000
+      internalID: -737089501758624201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 220
+        width: 392
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f752dfbc34b54e0800000000000000
+      internalID: -1991923866776797372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_11
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 243
+        width: 247
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f6a369ede99af50800000000000000
+      internalID: 6893215383507595115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch-2-bar-merah-biru_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 61
+        width: 264
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0456ff3208fb05c10800000000000000
+      internalID: 2040341188279493952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glitch-2-bar-merah-biru_0: -7433769392647847525
+      glitch-2-bar-merah-biru_1: -4801101937495208405
+      glitch-2-bar-merah-biru_10: -1991923866776797372
+      glitch-2-bar-merah-biru_11: 6893215383507595115
+      glitch-2-bar-merah-biru_12: 2040341188279493952
+      glitch-2-bar-merah-biru_2: -3155961800011000379
+      glitch-2-bar-merah-biru_3: -398009498637476296
+      glitch-2-bar-merah-biru_4: 8343791397020795469
+      glitch-2-bar-merah-biru_5: -6734506404144376383
+      glitch-2-bar-merah-biru_6: 5274901180438861789
+      glitch-2-bar-merah-biru_7: 7879579287024206921
+      glitch-2-bar-merah-biru_8: -9200484353852658817
+      glitch-2-bar-merah-biru_9: -737089501758624201
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

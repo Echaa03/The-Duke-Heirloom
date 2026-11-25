@@ -19,7 +19,8 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
 
     [Header("Inspection mode")]
-    public InspectionMode inspection; // kalau kosong otomatis ditambahkan
+    public InspectionMode inspection; 
+    public CharacterSprite Professor;
     [TextArea] public string inspectionHint = "<i> Click anything in the document that looks important.</i>";
 
     const string InspectionFlow = "inspection";
@@ -30,6 +31,13 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     string pendingInspect;   // dari #inspect
     string pendingOpenDoc;   // dari #open
     bool pendingComplete;    // dari #complete
+
+    // ===== KHUSUS TESTING (cuma jalan di Unity Editor, tidak ikut ke build) =====
+    [Header("Testing (Editor only)")]
+    [Tooltip("Centang ini supaya semua investigasi (#inspect) dilewati saat Play di Editor.")]
+    public bool skipInspections = false;
+    [Tooltip("Tombol untuk langsung menyelesaikan investigasi yang sedang terbuka.")]
+    public KeyCode skipInspectionKey = KeyCode.F8;
 
 
     void Start()
@@ -42,13 +50,20 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             inspection = gameObject.AddComponent<InspectionMode>();
 
 
-        inspection.HotspotClicked += OnHotspotClicked;
+        inspection.HotspotClicked += onhotspotclicked;
 
-        NextLine();
+        nextline();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // jangan bisa klik selama pindah lokasi (layar fade hitam)
+        if (BackgroundManager.Instance != null && BackgroundManager.Instance.BlocksDialogue)
+            return;
+        // jangan bisa klik selama telpon masih berdering (nunggu diangkat)
+        if (PhoneCallUI.Instance != null && PhoneCallUI.Instance.BlocksDialogue)
+            return;
+
         if (isTyping)
         {
             StopCoroutine(typing);
@@ -56,49 +71,59 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             isTyping = false;
             return;
         }
-        NextLine();
+
+        nextline();
     }
 
-    void NextLine()
+    void nextline()
     {
      
         if (pendingInspect != null)
         {
             string doc = pendingInspect;
             pendingInspect = null;
-            StartInspection(doc);
+#if UNITY_EDITOR
+            if (skipInspections)
+            {
+                Debug.Log("[DialogueManager] (Testing) Investigasi '" + doc + "' dilewati.");
+                nextline();
+                return;
+            }
+#endif
+            startinspection(doc);
             return;
         }
 
         // zoom out
         if (inInspection && !clueRunning)
         {
-            inspection.ZoomOut();
+            inspection.zoomout();
             return;
         }
 
         if (!story.canContinue)
         {
-            if (inInspection) FinishClue();
+            if (inInspection)
+                finishclue();
             return;
         }
 
         string line = story.Continue().Trim();
-        ReadTags(story.currentTags);
+        readtags(story.currentTags);
 
         // baris kosong (misalnya knot yang langsung -> DONE) -> langsung lanjut
         if (line.Length == 0)
         {
-            NextLine();
+            nextline();
             return;
         }
 
         if (inInspection) 
             clueHadText = true;
-        ShowLine(line);
+        showline(line);
     }
 
-    void ShowLine(string line)
+    void showline(string line)
     {
         int colon = line.IndexOf(':');
         if (colon > 0)
@@ -115,10 +140,10 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         if (typing != null)
             StopCoroutine(typing);
 
-        typing = StartCoroutine(Typingeffectyeet());
+        typing = StartCoroutine(typingeffectyeet());
     }
 
-    void ReadTags(List <string> tags)
+    void readtags(List <string> tags)
     {
         if (tags == null) 
             
@@ -137,21 +162,31 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                     break;
                 case "open":     pendingOpenDoc = value; 
                     break;
-                case "evidence": inspection.ShowEvidence(value);
+                case "evidence": inspection.showevidence(value);
                     break;
                 case "complete": pendingComplete = true;
+                    break;
+                case "prof": Professor.setexpression(value);
+                    break;
+                default:
+                    // #call, #call_time, #call_layout -> PhoneCallUI
+                    if (PhoneCallUI.Instance != null && PhoneCallUI.Instance.handletag(key, value))
+                        break;
+                    // #bg, #bg_black, #black, #zoom, #zoomreset -> BackgroundManager
+                    if (BackgroundManager.Instance != null)
+                        BackgroundManager.Instance.handletag(key, value);
                     break;
             }
         }
     }
 
 
-    void StartInspection(string docName)
+    void startinspection(string docName)
     {
-        if (!inspection.Open(docName, (RectTransform)transform, DialogueText.font))
+        if (!inspection.open(docName, (RectTransform)transform, DialogueText.font))
         {
             Debug.LogWarning("[DialogueManager] Inspection '" + docName + "' tidak bisa dibuka, cerita lanjut.");
-            NextLine();
+            nextline();
             return;
         }
 
@@ -162,10 +197,10 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
         //showing hint
         story.SwitchFlow(InspectionFlow);
-        ShowHint();
+        showhint();
     }
 
-    void OnHotspotClicked(string hotspotId)
+    void onhotspotclicked(string hotspotId)
     {
         if (!inInspection || clueRunning || isTyping) 
            
@@ -182,25 +217,25 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        inspection.ZoomTo(hotspotId);
-        inspection.MarkSeen(hotspotId);
+        inspection.zoomto(hotspotId);
+        inspection.markseen(hotspotId);
         inspection.Busy = true;
         clueRunning = true;
         clueHadText = false;
-        NextLine();
+        nextline();
     }
 
     // dipanggil waktu baris terakhir sebuah clue sudah di-klik
-    void FinishClue()
+    void finishclue()
     {
         clueRunning = false;
         inspection.Busy = false;
 
-        if (pendingComplete || InkFlag(InspectionDoneVar))
+        if (pendingComplete || inkflag(InspectionDoneVar))
         {
             pendingComplete = false;
             pendingOpenDoc = null;
-            EndInspection();
+            endinspection();
             return;
         }
 
@@ -208,30 +243,30 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         {
             string doc = pendingOpenDoc;
             pendingOpenDoc = null;
-            if (!inspection.SwitchTo(doc)) 
-                inspection.ZoomOut(); // if dok gd den zom out
+            if (!inspection.switchto(doc)) 
+                inspection.zoomout(); // if dok gd den zom out
         }
         else if (clueHadText)
         {
-            inspection.ZoomOut();
+            inspection.zoomout();
         }
 
-        ShowHint();
+        showhint();
     }
 
-    void EndInspection()
+    void endinspection()
     {
         inInspection = false;
         clueRunning = false;
-        if (InkFlag(InspectionDoneVar))
+        if (inkflag(InspectionDoneVar))
             story.variablesState[InspectionDoneVar] = false; // reset for next inspct
 
         story.SwitchToDefaultFlow();
-        inspection.Close();
-        NextLine(); // after this the game continue like usual
+        inspection.close();
+        nextline(); // after this the game continue like usual
     }
 
-    bool InkFlag(string name)
+    bool inkflag(string name)
     {
         object v = story.variablesState[name]; 
         if (v is bool b) 
@@ -241,7 +276,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         return false;
     }
 
-    void ShowHint()
+    void showhint()
     {
         if (typing != null) 
             StopCoroutine(typing);
@@ -252,18 +287,67 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         DialogueText.maxVisibleCharacters = 9099999;
     }
 
-    [ContextMenu("Debug: Skip inspection")]
-    void DebugSkipInspection()
+#if UNITY_EDITOR
+    void Update()
     {
-        if (inInspection)
-            EndInspection();
+        if (inInspection && skipkeypressed())
+        {
+            Debug.Log("[DialogueManager] (Testing) Investigasi diselesaikan lewat tombol " + skipInspectionKey + ".");
+            debugskipinspection();
+        }
     }
 
-    IEnumerator Typingeffectyeet()
+    bool skipkeypressed()
+    {
+#if ENABLE_INPUT_SYSTEM
+        var kb = UnityEngine.InputSystem.Keyboard.current;
+        if (kb == null)
+            return false;
+        switch (skipInspectionKey)
+        {
+            case KeyCode.F8:  return kb.f8Key.wasPressedThisFrame;
+            case KeyCode.F9:  return kb.f9Key.wasPressedThisFrame;
+            case KeyCode.F10: return kb.f10Key.wasPressedThisFrame;
+            case KeyCode.F12: return kb.f12Key.wasPressedThisFrame;
+            default:          return kb.f8Key.wasPressedThisFrame;
+        }
+#else
+        return Input.GetKeyDown(skipInspectionKey);
+#endif
+    }
+#endif
+
+    [ContextMenu("Debug: Skip inspection")]
+    void debugskipinspection()
+    {
+        if (!inInspection)
+            return;
+
+        // hentikan clue / typing yang masih jalan supaya tidak nyangkut
+        if (typing != null)
+            StopCoroutine(typing);
+        isTyping = false;
+        clueRunning = false;
+        pendingOpenDoc = null;
+        pendingComplete = false;
+        inspection.Busy = false;
+
+        endinspection();
+    }
+
+    IEnumerator typingeffectyeet()
     {
         //panggil bool typing nya pas text nya mau munucl
         isTyping = true;
         DialogueText.maxVisibleCharacters = 0; //this will hide everythign
+
+        // tunggu sampai transisi BG lewat hitam selesai, baru teks diketik
+        while (BackgroundManager.Instance != null && BackgroundManager.Instance.BlocksDialogue)
+            yield return null;
+        // tunggu telpon diangkat dulu (nada sambung + bunyi klik), baru teks diketik
+        while (PhoneCallUI.Instance != null && PhoneCallUI.Instance.BlocksDialogue)
+            yield return null;
+
         DialogueText.ForceMeshUpdate();
 
         int total = DialogueText.textInfo.characterCount; //ngitung jumlah length kata2nya
@@ -273,6 +357,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             DialogueText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(Typingspeedyeet);
         }
+
         isTyping = false;
     }
 }

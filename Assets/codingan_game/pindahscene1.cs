@@ -22,6 +22,7 @@ public class SceneChanger : MonoBehaviour
             yield return null;
             
         }
+
         SceneManager.LoadScene(nextScene);
     }
 }

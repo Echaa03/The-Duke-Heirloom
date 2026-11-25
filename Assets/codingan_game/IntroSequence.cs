@@ -21,6 +21,7 @@ public class IntroSequence : MonoBehaviour
             Textbox.alpha = time / Fadetime;
             yield return null;
         }
+
         Textbox.alpha = 1;
         Textbox.blocksRaycasts = true;
     }

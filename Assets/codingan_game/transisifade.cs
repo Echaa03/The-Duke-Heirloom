@@ -8,10 +8,10 @@ public class transisifade : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Fade(5, 0));
+        StartCoroutine(fade(5, 0));
     }
 
-    public IEnumerator Fade(float from, float to)
+    public IEnumerator fade(float from, float to)
     {
         float time = 0;
         while(time < Duration)
@@ -20,6 +20,7 @@ public class transisifade : MonoBehaviour
             FadeTrans.alpha = Mathf.Lerp(from , to, time/Duration);
             yield return null;
         }
+
         FadeTrans.alpha = to;
     }
 }

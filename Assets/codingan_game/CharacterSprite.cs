@@ -17,7 +17,7 @@ public class CharacterSprite : MonoBehaviour
     public Image image;
     public Expression[] expressions; //lists of expression being used
 
-    public void SetExpression(string expname)
+    public void setexpression(string expname)
     {
         if(expname == "hide")
         {
@@ -25,6 +25,7 @@ public class CharacterSprite : MonoBehaviour
 
             return;
         }
+
         foreach(Expression e in expressions)
         {
             if(e.name == expname)
